@@ -1,0 +1,36 @@
+// --------------------
+// Components
+// --------------------
+// レイアウト全般
+@import 'components/layout';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/typography';
+@import 'components/button';
+@import 'components/banner';
+
+
+body {
+  width: 100%;
+  color: $color-font-base;
+  // font-family: $font_family_default;
+  font-family: 'Yu Gothic Medium';
+  @include fs(20,26);
+}
+.p-index_body{
+  background: #edeae5;
+  @include bp(0, 768px) {
+    overflow: hidden;
+  }
+}
+.only-pc {
+  @include bp(tab) {
+    display: none !important;
+  }
+}
+
+.only-sp {
+  @include bp(pc) {
+    display: none !important;
+  }
+}

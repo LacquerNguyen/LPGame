@@ -1,0 +1,14 @@
+*.log
+
+/.htaccess
+/license.txt
+/readme.html
+/sitemap.xml
+/sitemap.xml.gz
+
+node_modules
+.idea
+
+#src/wp-content/plugins/
+src/wp-content/plugins/http-auth/
+!.gitkeep

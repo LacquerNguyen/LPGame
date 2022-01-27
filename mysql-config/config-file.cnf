@@ -1,0 +1,5 @@
+[mysqld]
+
+innodb_log_file_size = 512M
+innodb_strict_mode = 0
+sql-mode="ALLOW_INVALID_DATES"

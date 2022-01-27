@@ -1,0 +1,63 @@
+version: "3"
+
+# Services
+# -----------------------------------------------------------------------------
+services:
+  # Database
+  # -----------------------------------------
+  db:
+    image: mysql:5.7
+    container_name: ${PROJECT_NAME}-db
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./db-data:/docker-entrypoint-initdb.d
+      - ./mysql-config:/etc/mysql/conf.d
+    #restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+    #ports:
+    # - 3306:3306
+
+  # WordPress
+  # -----------------------------------------
+  wordpress:
+    image: wordpress:5.4.1
+    container_name: ${PROJECT_NAME}-web
+    volumes:
+      - ./src:/var/www/html
+      - ./config/php.ini:/usr/local/etc/php/conf.d/php.ini
+    depends_on:
+      - db
+    ports:
+      - ${PORT_NUM}:80
+    #restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+    domainname: ${PROJECT_NAME}.test
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: ${PROJECT_NAME}-phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=db:3306
+      - PMA_USER=wordpress
+      - PMA_PASSWORD=wordpress
+#    restart: always
+    links:
+      - db
+    ports:
+      - 8828:80
+    volumes:
+      - /sessions
+    depends_on:
+      - db
+
+volumes:
+  db_data:
+    driver: local

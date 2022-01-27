@@ -1,0 +1,114 @@
+// --------------------
+// Global Variables
+// --------------------
+$global-font-size: 14px;
+$global-font-family: 'NotoSansJP-Regular', sans-serif;
+$font-family-notosansjplight: "NotoSansJP-Light", sans-serif;
+$font-family-notosansjpmedium: "NotoSansJP-Medium", sans-serif;
+$font-family-notosansjpbold: "NotoSansJP-Bold", sans-serif;
+$font-family-roboto: 'Roboto', sans-serif;
+$spacer: 16px;
+
+// --------------------
+// Global Colors
+// --------------------
+$color-font-base: #535050;
+$bg-dark: #252526;
+$color-light: #fff;
+$color-white-light: #fcfcfc;
+$color-black: #131313;
+$color-text-black: #333333;
+$color-red: #F84646;
+$color-blue-dark: #1E2241;
+$color-gray-dark: #464646;
+$color-orange: #e88200;
+$bg-gray: #f3f3f6;
+$color-border-gray: #515154;
+$bg-white: #fff;
+$bg-transparent: transparent;
+
+// --------------------
+// Global Font Sizes
+// --------------------
+$font-size-mini: ($global-font-size * 0.714);
+$font-size-tiny: ($global-font-size * 0.785);
+$font-size-small: ($global-font-size * 0.857);
+$font-size-medium: $global-font-size;
+$font-size-large: ($global-font-size * 1.142);
+$font-size-big: ($global-font-size * 1.285);
+$font-size-huge: ($global-font-size * 1.428);
+$font-size-massive: ($global-font-size * 1.714);
+
+// --------------------
+// Component Variables
+// グローバルに使用するもののみ定義。ローカルなものは各コンポーネントに記載
+// --------------------
+// header
+$header-height: 56px;
+
+// sidebar
+$sidebar-width: 20%;
+$sidebar-min-width: 240px;
+$sidebar-max-width: 280px;
+
+// --------------------
+// Z-index master
+// --------------------
+$zindex-dropdown: 1000 !default;
+$zindex-sticky: 1020 !default;
+$zindex-fixed: 1030 !default;
+$zindex-modal-backdrop: 1040 !default;
+$zindex-modal: 1050 !default;
+$zindex-popover: 1060 !default;
+$zindex-tooltip: 1070 !default;
+
+//  val
+
+//  break point for _responsive.scss
+$bp_tab_max_width: 960;
+$bp_sp_max_width: 768;
+
+// layout setting
+$pc_min_width: 1050px;
+$pc_max_width: 1366px;
+
+// $pc_top_visual_padding_top: 400px;
+// $pc_top_visual_padding_top: 56.25%; // 16:9
+// $sp_top_visual_padding_top: 56.25%; // 16:9
+
+// $pc_top_visual_min_height: 400px;
+// $pc_top_visual_max_height: 675px;
+// $sp_top_visual_min_height: 300px;
+// $sp_top_visual_max_height: 600px;
+
+$pc_top_content_side_padding: 25px;
+$sp_top_content_side_padding: 3.5%;
+
+$pc_page_content_side_padding: 25px;
+$sp_page_content_side_padding: 3.5%;
+
+// $pc_page_sidebar_width: 300px;
+// $pc_page_sidebar_margin: 20px;
+
+//  color
+$color_primary: #915912;
+$color_primary_light: #c5791c;
+$color_primary_bg: #eaf7ee;
+$color_border: #d4d2d1;
+
+$color_bg_navi: #915912;
+$color_bg_secondary: #edeae5;
+
+$color_font_base: #1a1311;
+$color_font_sub: #898482;
+$color_font_en: #c5791c;
+
+// border-radius
+$border_radius: 30px;
+$border_radius_sp: 19px;
+
+// font-family
+$font_family_default: YakuHanJP, 'Zen Kaku Gothic New', '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', 'Helvetica Neue', Arial,
+  'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+  $font_family_sp: YakuHanJP, 'Zen Kaku Gothic New', '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', 'Helvetica Neue', Arial,
+  'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;

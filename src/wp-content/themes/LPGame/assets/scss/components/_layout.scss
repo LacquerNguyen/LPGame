@@ -1,0 +1,34 @@
+// --------------------
+// Layout
+// --------------------
+.only-pc {
+    @include bp(tab) {
+        display: none !important;
+    }
+}
+
+.only-pc-max {
+    @include bp(0, 1023px) {
+        display: none !important;
+    }
+}
+
+.only-tab {
+    @include bp(1024px) {
+        display: none !important;
+    }
+}
+.only-sp {
+    @include bp(pc) {
+        display: none !important;
+    }
+}
+  // .u-only-pc
+.u-only-sp {
+    @include mq_up(pc) {
+      display: none;
+    }
+    @include mq_down(sp) {
+      display: inline-block;
+    }
+  }

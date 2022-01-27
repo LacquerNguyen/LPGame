@@ -1,0 +1,10 @@
+// @charset "UTF-8";
+@import 'common/fonts';
+@import 'common/variables';
+@import 'common/mixins';
+@import 'common/reset';
+
+// 共通スタイル
+@import 'common';
+
+@import 'pages/top';
