@@ -29,7 +29,6 @@ get_header(); ?>
         </div>
         <div class="block__email wow fadeInUp" data-wow-delay="1.5s">
             <?php the_field('email_subscribers');?>
-            <!-- <input type="email" name="" id="" placeholder="<?php echo get_field('placeholder_email',44);?>"> -->
         </div>
     </div>
 </div>
