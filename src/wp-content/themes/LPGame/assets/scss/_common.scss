@@ -12,25 +12,82 @@
 
 body {
   width: 100%;
-  color: $color-font-base;
-  // font-family: $font_family_default;
-  font-family: 'Yu Gothic Medium';
-  @include fs(20,26);
+  color: #757575;
+  font-family: $font-family-montserrat;
+  font-size: 14px;
+  line-height: 1.4;
+  
 }
-.p-index_body{
-  background: #edeae5;
-  @include bp(0, 768px) {
-    overflow: hidden;
+.l__container{
+  width: 1160px;
+  margin: 0 auto;
+  @include bp(0, 1180px) {
+    width: 100%;
+    padding: 0 60px;
+  }
+  @include bp(0, 860px) {
+    padding: 0 30px;
   }
 }
-.only-pc {
-  @include bp(tab) {
-    display: none !important;
+@keyframes r {
+  0%{
+    transform: rotateY(0deg);
+    opacity: 0;
+  }
+  20%{
+    transform: rotateY(520deg);
+    opacity: 0;
+  }
+  40%{
+    transform: rotateY(720deg);
+    opacity: 0.1;
+  }
+  60%{
+    transform: rotateY(520deg);
+    opacity: 0.2;
+  }
+  80%{
+    transform: rotateY(720deg);
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(1060px);
   }
 }
-
-.only-sp {
-  @include bp(pc) {
-    display: none !important;
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+.block__email{
+  text-align: center;
+  input{
+    font-family: $font-family-montserrat;
+    width: 560px;
+    height: 56px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #545454;
+    border: none;
+    padding: 0 20px;
+    background: #FFFFFF url(../images/icon/arrow-right.png) no-repeat right 10px center;
+    @include bp(0, 640px) {
+      width: 100%;
+    }
   }
+}
+.es-field-wrap {
+  label{
+    text-indent: -9999px;
+    display: block;
+  }
+}
+.es_subscription_form_submit{
+  display: none;
 }
